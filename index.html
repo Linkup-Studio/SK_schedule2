@@ -985,6 +985,45 @@
       color: var(--muted);
       font-weight: 700;
     }
+
+    @media print {
+      html, body {
+        height: auto !important;
+        overflow: visible !important;
+        background: white !important;
+      }
+      .progress-bar, .slide-number, .nav-bar {
+        display: none !important;
+      }
+      .slide-container {
+        height: auto !important;
+        overflow: visible !important;
+      }
+      .slide {
+        position: relative !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: flex !important;
+        height: 100vh !important;
+        padding: 40px 16px 20px !important;
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+      .slide:last-child {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+      .animate-up {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .phone-mockup {
+        box-shadow: none !important;
+        border: 2px solid #e5e7eb !important;
+        background: white !important;
+      }
+    }
   </style>
 </head>
 <body>
