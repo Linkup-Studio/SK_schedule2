@@ -1029,7 +1029,7 @@
 </head>
 <body>
   <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-  <div class="slide-number" id="slideNumber">1 / 9</div>
+  <div class="slide-number" id="slideNumber">1 / 10</div>
 
   <div class="slide-container" id="slideContainer">
 
@@ -1759,11 +1759,11 @@
       </div>
     </div>
 
-    <!-- ===== SLIDE 8: ホーム画面に追加 ===== -->
+    <!-- ===== SLIDE 8: ホーム画面に追加（iPhone） ===== -->
     <div class="slide" data-slide="7">
       <div class="slide-inner">
         <div class="slide-badge animate-up">📱 STEP 7</div>
-        <h2 class="slide-title animate-up delay-1">ホーム画面に追加する</h2>
+        <h2 class="slide-title animate-up delay-1">ホーム画面に追加する<span style="display:block; font-size:14px; color:var(--muted); margin-top:2px;">（iPhoneの方）</span></h2>
         <p class="slide-subtitle animate-up delay-2">すぐにアクセスできるように、<br>スマホのホーム画面にアイコンを追加しましょう。</p>
 
         <div class="step-list animate-up delay-3">
@@ -1800,13 +1800,51 @@
 
         <div class="tip-box animate-up delay-4">
           <span class="tip-icon">💡</span>
-          <span class="tip-text">次回からは追加されたアイコンをタップするだけで、このアプリがすぐに開けるようになります！<br>（Androidの方もブラウザの右上「︙」メニューから同様に追加できます）</span>
+          <span class="tip-text">次回からは追加されたアイコンをタップするだけで、このアプリがすぐに開けるようになります！</span>
         </div>
       </div>
     </div>
 
-    <!-- ===== SLIDE 9: まとめ ===== -->
+    <!-- ===== SLIDE 9: ホーム画面に追加（Android） ===== -->
     <div class="slide" data-slide="8">
+      <div class="slide-inner">
+        <div class="slide-badge animate-up">🤖 STEP 8</div>
+        <h2 class="slide-title animate-up delay-1">ホーム画面に追加する<span style="display:block; font-size:14px; color:var(--muted); margin-top:2px;">（Androidの方）</span></h2>
+        <p class="slide-subtitle animate-up delay-2">Android（Google Chrome）をご利用の場合の<br>ホーム画面追加方法です。</p>
+
+        <div class="step-list animate-up delay-3">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>メニューを開く</h4>
+              <p>画面の右上にある <strong style="color:var(--primary);">[ ︙ ]（3つの点のマーク）</strong> をタップします。</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>「ホーム画面に追加」を選択</h4>
+              <p>開いたメニューの中から、<strong style="color:var(--primary);">[ ホーム画面に追加 ]</strong> をタップします。</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>「追加」をタップ</h4>
+              <p>確認画面が出たら、そのまま <strong style="color:#2563eb;">[ 追加 ]</strong> をタップすれば完了です！</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tip-box animate-up delay-4" style="background:rgba(22, 163, 74, 0.08); border:2px dashed rgba(22, 163, 74, 0.3);">
+          <span class="tip-icon" style="color:#16a34a;">✅</span>
+          <span class="tip-text" style="color:#15803d;">Androidの場合は、追加するだけでカレンダーなどもそのまま綺麗に動きますので特別な設定は不要です。</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SLIDE 10: まとめ ===== -->
+    <div class="slide" data-slide="9">
       <div class="slide-inner">
         <div class="final-hero animate-up">
           <div class="final-checkmark">✅</div>
@@ -1873,7 +1911,7 @@
   </div>
 
   <script>
-    const TOTAL_SLIDES = 9;
+    const TOTAL_SLIDES = 10;
     let current = 0;
     let isAnimating = false;
 
