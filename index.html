@@ -985,6 +985,62 @@
       color: var(--muted);
       font-weight: 700;
     }
+
+    /* ===== Print / PDF ===== */
+    @media print {
+      html,
+      body {
+        height: auto;
+        overflow: visible;
+        background: white;
+      }
+
+      .progress-bar,
+      .slide-number,
+      .nav-bar {
+        display: none !important;
+      }
+
+      .slide-container {
+        height: auto;
+        overflow: visible;
+      }
+
+      .slide {
+        position: relative;
+        inset: auto;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto;
+        display: block;
+        min-height: 100vh;
+        height: auto;
+        overflow: visible;
+        padding: 16px 16px 24px;
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .slide:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+
+      .slide-inner {
+        padding-top: 0;
+      }
+
+      .slide .animate-up {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+      }
+
+      .phone-mockup {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1815,11 +1871,12 @@
   </div>
 
   <script>
-    const TOTAL_SLIDES = 8;
-    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+    const TOTAL_SLIDES = slides.length;
+    const initialSlide = Number(new URLSearchParams(window.location.search).get('slide') || 0);
+    let current = Number.isInteger(initialSlide) && initialSlide >= 0 && initialSlide < TOTAL_SLIDES ? initialSlide : 0;
     let isAnimating = false;
 
-    const slides = document.querySelectorAll('.slide');
     const progressFill = document.getElementById('progressFill');
     const slideNumber = document.getElementById('slideNumber');
     const btnPrev = document.getElementById('btnPrev');
@@ -1829,9 +1886,13 @@
     // Create dots
     for (let i = 0; i < TOTAL_SLIDES; i++) {
       const dot = document.createElement('div');
-      dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+      dot.className = 'nav-dot' + (i === current ? ' active' : '');
       navDots.appendChild(dot);
     }
+
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('active', index === current);
+    });
 
     function updateUI() {
       // Progress
