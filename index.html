@@ -985,51 +985,11 @@
       color: var(--muted);
       font-weight: 700;
     }
-
-    @media print {
-      html, body {
-        height: auto !important;
-        overflow: visible !important;
-        background: white !important;
-      }
-      .progress-bar, .slide-number, .nav-bar {
-        display: none !important;
-      }
-      .slide-container {
-        height: auto !important;
-        overflow: visible !important;
-      }
-      .slide {
-        position: relative !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        display: block !important;
-        height: auto !important;
-        min-height: 100% !important;
-        padding: 40px 16px 20px !important;
-        page-break-after: always !important;
-        break-after: page !important;
-      }
-      .slide:last-child {
-        page-break-after: auto !important;
-        break-after: auto !important;
-      }
-      .animate-up {
-        animation: none !important;
-        opacity: 1 !important;
-        transform: none !important;
-      }
-      .phone-mockup {
-        box-shadow: none !important;
-        border: 2px solid #e5e7eb !important;
-        background: white !important;
-      }
-    }
   </style>
 </head>
 <body>
   <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-  <div class="slide-number" id="slideNumber">1 / 10</div>
+  <div class="slide-number" id="slideNumber">1 / 8</div>
 
   <div class="slide-container" id="slideContainer">
 
@@ -1041,19 +1001,19 @@
           <div class="cover-team">一色SKクラブ</div>
           <div class="cover-divider"></div>
           <div class="cover-title">アプリ操作ガイド</div>
-          <div class="cover-desc">保護者のみなさまへ<br>スケジュール確認＆出欠回答の方法</div>
+          <div class="cover-desc">保護者・選手のみなさまへ<br>予定確認＆出欠回答の方法</div>
         </div>
 
         <div class="summary-grid animate-up delay-2">
           <div class="summary-card">
             <div class="sc-icon">📅</div>
-            <div class="sc-title">スケジュール確認</div>
-            <div class="sc-desc">試合・練習の予定を<br>すぐにチェック</div>
+            <div class="sc-title">予定確認</div>
+            <div class="sc-desc">試合・練習・休日を<br>すぐにチェック</div>
           </div>
           <div class="summary-card">
             <div class="sc-icon">✋</div>
             <div class="sc-title">出欠の回答</div>
-            <div class="sc-desc">○×△をタップして<br>かんたん送信</div>
+            <div class="sc-desc">午前・午後を選んで<br>かんたん送信</div>
           </div>
           <div class="summary-card">
             <div class="sc-icon">📢</div>
@@ -1078,7 +1038,7 @@
       <div class="slide-inner">
         <div class="slide-badge animate-up">📱 STEP 1</div>
         <h2 class="slide-title animate-up delay-1">ホーム画面を見る</h2>
-        <p class="slide-subtitle animate-up delay-2">アプリを開くと最初に表示される画面です。<br>今後の試合とお知らせがまとめて見れます。</p>
+        <p class="slide-subtitle animate-up delay-2">アプリを開くと最初に表示される画面です。<br>今後の予定とお知らせがまとめて見れます。</p>
 
         <div class="phone-mockup animate-up delay-3">
           <div class="phone-notch"></div>
@@ -1095,10 +1055,10 @@
             </div>
 
             <div style="font-size:10px; font-weight:900; margin-bottom:6px; display:flex; align-items:center; gap:4px;">
-              📅 今後の試合
+              📅 今後の予定
             </div>
 
-            <!-- 試合カード1 -->
+            <!-- 予定カード1 -->
             <div class="mock-card">
               <div class="mock-game-row">
                 <div class="mock-date-block">
@@ -1121,7 +1081,7 @@
               </div>
             </div>
 
-            <!-- 試合カード2 -->
+            <!-- 予定カード2 -->
             <div class="mock-card">
               <div class="mock-game-row">
                 <div class="mock-date-block" style="background:linear-gradient(135deg, #1a237e 0%, #3949ab 100%);">
@@ -1131,11 +1091,11 @@
                 </div>
                 <div class="mock-game-info">
                   <div>
-                    <span class="mock-badge mock-badge-official">公式戦</span>
+                    <span class="mock-badge" style="background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0;">練習</span>
                     <span class="mock-badge" style="background:#f0fdf4; color:#059669; border:1px solid #bbf7d0;">中2</span>
                   </div>
-                  <div class="mock-game-title">東海ミドルチャレンジ</div>
-                  <div class="mock-game-meta">📍 一色中学校 ・ 🕐 10:30</div>
+                  <div class="mock-game-title">通常練習</div>
+                  <div class="mock-game-meta">📍 一色中学校 ・ 🕐 13:00</div>
                 </div>
               </div>
               <div class="mock-attendance-bar">
@@ -1158,7 +1118,7 @@
                   <span class="mock-badge mock-badge-grade" style="font-size:7px; padding:0 3px;">中3</span>
                 </div>
                 <div style="font-size:9px; font-weight:900; margin-top:1px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">公式戦のお知らせ: リーグ戦</div>
-                <div style="font-size:7px; color:var(--muted);">4/13 · 管理者</div>
+                <div style="font-size:7px; color:var(--muted);">4/13 · チーム</div>
               </div>
             </div>
 
@@ -1210,8 +1170,8 @@
           <div class="step-item">
             <div class="step-number">2</div>
             <div class="step-content">
-              <h4>📅 今後の試合（最大2件）</h4>
-              <p>直近の試合が最大2件表示されます。タップで詳細＆出欠回答へ</p>
+              <h4>📅 今後の予定（最大2件）</h4>
+              <p>直近の予定が最大2件表示されます。タップで詳細＆出欠回答へ</p>
             </div>
           </div>
           <div class="step-item">
@@ -1315,7 +1275,8 @@
             <div style="display:flex; justify-content:center; gap:8px; font-size:8px; color:var(--muted);">
               <span style="display:flex; align-items:center; gap:3px;"><span style="width:6px;height:6px;border-radius:50%;background:#dc2626;display:inline-block;"></span>公式戦</span>
               <span style="display:flex; align-items:center; gap:3px;"><span style="width:6px;height:6px;border-radius:50%;background:#2563eb;display:inline-block;"></span>練習試合</span>
-              <span style="display:flex; align-items:center; gap:3px;"><span style="width:6px;height:6px;border-radius:50%;background:#6b7280;display:inline-block;"></span>その他</span>
+              <span style="display:flex; align-items:center; gap:3px;"><span style="width:6px;height:6px;border-radius:50%;background:#16a34a;display:inline-block;"></span>練習</span>
+              <span style="display:flex; align-items:center; gap:3px;"><span style="width:6px;height:6px;border-radius:50%;background:#64748b;display:inline-block;"></span>休日</span>
             </div>
           </div>
         </div>
@@ -1339,7 +1300,7 @@
               </div>
             </div>
 
-            <!-- リスト表示のゲームカード群 -->
+            <!-- リスト表示の予定カード群 -->
             <div class="mock-card">
               <div class="mock-game-row">
                 <div class="mock-date-block">
@@ -1395,11 +1356,11 @@
                 </div>
                 <div class="mock-game-info">
                   <div>
-                    <span class="mock-badge mock-badge-official">公式戦</span>
+                    <span class="mock-badge" style="background:#f8fafc;color:#475569;border:1px solid #cbd5e1;">休日</span>
                     <span class="mock-badge mock-badge-grade">中3</span>
                   </div>
-                  <div class="mock-game-title">春季大会 2回戦</div>
-                  <div class="mock-game-meta">📍 未定 ・ 🕐 未定</div>
+                  <div class="mock-game-title">活動休み</div>
+                  <div class="mock-game-meta">📍 休日 ・ 🕐 終日</div>
                 </div>
               </div>
               <div class="mock-attendance-bar" style="background:#f3f4f6;"></div>
@@ -1412,14 +1373,14 @@
             <div class="step-number">1</div>
             <div class="step-content">
               <h4>📅 カレンダー表示</h4>
-              <p>月全体を見渡して、試合のある日を色ドットで確認できます</p>
+              <p>月全体を見渡して、予定のある日を色ドットで確認できます</p>
             </div>
           </div>
           <div class="step-item">
             <div class="step-number">2</div>
             <div class="step-content">
               <h4>≡ リスト表示</h4>
-              <p>今後の試合を一覧で確認。出欠状況バーも一緒に見れて便利です</p>
+              <p>今後の予定を一覧で確認。出欠状況バーも一緒に見れて便利です</p>
             </div>
           </div>
           <div class="step-item">
@@ -1433,17 +1394,17 @@
 
         <div class="tip-box animate-up delay-5">
           <span class="tip-icon">💡</span>
-          <span class="tip-text">リスト表示なら、今後の試合が時系列で並ぶので予定が把握しやすいです！</span>
+          <span class="tip-text">リスト表示なら、今後の予定が時系列で並ぶので把握しやすいです！</span>
         </div>
       </div>
     </div>
 
-    <!-- ===== SLIDE 4: 試合詳細の見方 ===== -->
+    <!-- ===== SLIDE 4: 予定詳細の見方 ===== -->
     <div class="slide" data-slide="3">
       <div class="slide-inner">
         <div class="slide-badge animate-up">📋 STEP 3</div>
-        <h2 class="slide-title animate-up delay-1">試合の詳細を確認</h2>
-        <p class="slide-subtitle animate-up delay-2">試合カードをタップすると、<br>日時・場所・集合場所など確認できます。</p>
+        <h2 class="slide-title animate-up delay-1">予定の詳細を確認</h2>
+        <p class="slide-subtitle animate-up delay-2">予定カードをタップすると、<br>日時・場所・集合場所など確認できます。</p>
 
         <div class="phone-mockup animate-up delay-3">
           <div class="phone-notch"></div>
@@ -1527,7 +1488,7 @@
       <div class="slide-inner">
         <div class="slide-badge animate-up">✋ STEP 4</div>
         <h2 class="slide-title animate-up delay-1">出欠を回答する</h2>
-        <p class="slide-subtitle animate-up delay-2">試合詳細ページの下半分に<br>出欠回答フォームがあります。</p>
+        <p class="slide-subtitle animate-up delay-2">予定詳細ページの下半分に<br>出欠回答フォームがあります。</p>
 
         <div class="phone-mockup animate-up delay-3">
           <div class="phone-notch"></div>
@@ -1547,7 +1508,24 @@
                 <div class="mock-input" style="font-weight:700; color:#aaa;">例: 佐藤 太郎</div>
               </div>
 
-              <div class="status-grid" style="margin:10px 0;">
+              <div style="font-size:8px; font-weight:900; color:var(--muted); margin:6px 0 3px;">午前</div>
+              <div class="status-grid" style="margin:4px 0 8px;">
+                <div class="status-btn status-attend selected">
+                  <span class="icon">○</span>
+                  <span class="label">参加</span>
+                </div>
+                <div class="status-btn status-absent">
+                  <span class="icon">×</span>
+                  <span class="label">欠席</span>
+                </div>
+                <div class="status-btn status-undecided">
+                  <span class="icon">△</span>
+                  <span class="label">未定</span>
+                </div>
+              </div>
+
+              <div style="font-size:8px; font-weight:900; color:var(--muted); margin:6px 0 3px;">午後</div>
+              <div class="status-grid" style="margin:4px 0 8px;">
                 <div class="status-btn status-attend selected">
                   <span class="icon">○</span>
                   <span class="label">参加</span>
@@ -1582,8 +1560,8 @@
           <div class="step-item">
             <div class="step-number">2</div>
             <div class="step-content">
-              <h4>○ × △ を選択</h4>
-              <p><strong style="color:var(--attend);">○参加</strong> ・ <strong style="color:var(--absent);">×欠席</strong> ・ <strong style="color:var(--undecided);">△未定</strong> をタップ</p>
+              <h4>午前・午後をそれぞれ選択</h4>
+              <p><strong style="color:var(--attend);">○参加</strong> ・ <strong style="color:var(--absent);">×欠席</strong> ・ <strong style="color:var(--undecided);">△未定</strong> を午前と午後で選びます</p>
             </div>
           </div>
           <div class="step-item">
@@ -1597,7 +1575,7 @@
 
         <div class="tip-box animate-up delay-5">
           <span class="tip-icon">💡</span>
-          <span class="tip-text">間違えても大丈夫！同じお名前でもう一度送信すれば、回答が上書き修正されます。</span>
+          <span class="tip-text">間違えても大丈夫！同じお名前でもう一度送信すれば、その予定の回答が上書き修正されます。</span>
         </div>
       </div>
     </div>
@@ -1607,7 +1585,7 @@
       <div class="slide-inner">
         <div class="slide-badge animate-up">📝 STEP 5</div>
         <h2 class="slide-title animate-up delay-1">欠席・未定の場合</h2>
-        <p class="slide-subtitle animate-up delay-2">×欠席 や △未定 を選ぶと、<br>理由の入力欄が表示されます。</p>
+        <p class="slide-subtitle animate-up delay-2">午前または午後で ×欠席 や △未定 を選ぶと、<br>理由・補足の入力欄が表示されます。</p>
 
         <div class="phone-mockup animate-up delay-3">
           <div class="phone-notch"></div>
@@ -1620,7 +1598,24 @@
                 <div class="mock-input" style="font-weight:900; color:var(--text);">佐藤 太郎</div>
               </div>
 
-              <div class="status-grid" style="margin:8px 0;">
+              <div style="font-size:8px; font-weight:900; color:var(--muted); margin:6px 0 3px;">午前</div>
+              <div class="status-grid" style="margin:4px 0 8px;">
+                <div class="status-btn status-attend selected">
+                  <span class="icon" style="color:var(--attend);">○</span>
+                  <span class="label" style="color:var(--attend);">参加</span>
+                </div>
+                <div class="status-btn">
+                  <span class="icon">×</span>
+                  <span class="label">欠席</span>
+                </div>
+                <div class="status-btn">
+                  <span class="icon" style="color:var(--undecided);">△</span>
+                  <span class="label" style="color:var(--undecided);">未定</span>
+                </div>
+              </div>
+
+              <div style="font-size:8px; font-weight:900; color:var(--muted); margin:6px 0 3px;">午後</div>
+              <div class="status-grid" style="margin:4px 0 8px;">
                 <div class="status-btn">
                   <span class="icon" style="color:var(--attend);">○</span>
                   <span class="label" style="color:var(--attend);">参加</span>
@@ -1637,8 +1632,8 @@
 
               <!-- 理由入力欄 -->
               <div style="background:rgba(220,38,38,0.05); border:1px solid rgba(220,38,38,0.15); border-radius:10px; padding:8px; margin-bottom:10px;">
-                <label style="font-size:8px; font-weight:700; color:var(--absent); display:block; margin-bottom:3px;">欠席理由（任意）</label>
-                <div class="mock-input" style="border-color:rgba(220,38,38,0.3); font-weight:700; color:#aaa; font-size:11px;">例: 塾のため</div>
+                <label style="font-size:8px; font-weight:700; color:var(--absent); display:block; margin-bottom:3px;">理由・補足（任意）</label>
+                <div class="mock-input" style="border-color:rgba(220,38,38,0.3); font-weight:700; color:#aaa; font-size:11px;">例: 午後は塾のため欠席</div>
               </div>
 
               <div class="mock-submit-btn">✅ この出欠を送信する</div>
@@ -1651,8 +1646,8 @@
             <div class="info-icon" style="background:rgba(220,38,38,0.1); color:var(--absent);">×</div>
             欠席の場合
           </div>
-          <div class="info-card-body">
-            「欠席理由」の入力欄が表示されます。<br>
+            <div class="info-card-body">
+            「理由・補足」の入力欄が表示されます。<br>
             <strong>入力は任意</strong>なので、空欄のままでも送信できます。
           </div>
         </div>
@@ -1663,8 +1658,8 @@
             未定の場合
           </div>
           <div class="info-card-body">
-            「未定の理由」の入力欄が表示されます。<br>
-            決まり次第、同じ名前で <strong style="color:var(--attend);">○参加</strong> や <strong style="color:var(--absent);">×欠席</strong> に変更できます。
+            「理由・補足」の入力欄が表示されます。<br>
+            決まり次第、同じ名前で午前・午後それぞれを <strong style="color:var(--attend);">○参加</strong> や <strong style="color:var(--absent);">×欠席</strong> に変更できます。
           </div>
         </div>
       </div>
@@ -1759,92 +1754,8 @@
       </div>
     </div>
 
-    <!-- ===== SLIDE 8: ホーム画面に追加（iPhone） ===== -->
+    <!-- ===== SLIDE 8: まとめ ===== -->
     <div class="slide" data-slide="7">
-      <div class="slide-inner">
-        <div class="slide-badge animate-up">📱 STEP 7</div>
-        <h2 class="slide-title animate-up delay-1">ホーム画面に追加する<span style="display:block; font-size:14px; color:var(--muted); margin-top:2px;">（iPhoneの方）</span></h2>
-        <p class="slide-subtitle animate-up delay-2">すぐにアクセスできるように、<br>スマホのホーム画面にアイコンを追加しましょう。</p>
-
-        <div class="step-list animate-up delay-3">
-          <div class="step-item">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h4>共有ボタンをタップ</h4>
-              <p>iPhoneのSafari画面下にある <strong style="color:var(--primary);">[ ↑矢印の四角マーク ]</strong> をタップします。</p>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h4>「ホーム画面に追加」を選択</h4>
-              <p>メニューを少し下にスクロールして、<strong style="color:var(--primary);">[ ＋ ホーム画面に追加 ]</strong> をタップします。</p>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-number" style="background:#dc2626;">⚠️</div>
-            <div class="step-content">
-              <h4><span style="color:#dc2626;">重要：</span>「Webアプリとして開く」をオフに</h4>
-              <p>カレンダー連動機能等を使うため、<strong style="color:#dc2626;">[ Webアプリとして開く ] のスイッチは必ず左（グレー）のオフ状態</strong>にしてください。<br>
-              <span style="font-size:11px; opacity:0.8;">※この設定が表示されない機種の場合は気にせず次へ</span></p>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h4>右上の「追加」をタップ</h4>
-              <p>画面右上にある <strong style="color:#2563eb;">[ 追加 ]</strong> ボタンを押せば完了です！「BallPark」のアイコンがホーム画面に並びます。</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="tip-box animate-up delay-4">
-          <span class="tip-icon">💡</span>
-          <span class="tip-text">次回からは追加されたアイコンをタップするだけで、このアプリがすぐに開けるようになります！</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== SLIDE 9: ホーム画面に追加（Android） ===== -->
-    <div class="slide" data-slide="8">
-      <div class="slide-inner">
-        <div class="slide-badge animate-up">🤖 STEP 8</div>
-        <h2 class="slide-title animate-up delay-1">ホーム画面に追加する<span style="display:block; font-size:14px; color:var(--muted); margin-top:2px;">（Androidの方）</span></h2>
-        <p class="slide-subtitle animate-up delay-2">Android（Google Chrome）をご利用の場合の<br>ホーム画面追加方法です。</p>
-
-        <div class="step-list animate-up delay-3">
-          <div class="step-item">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h4>メニューを開く</h4>
-              <p>画面の右上にある <strong style="color:var(--primary);">[ ︙ ]（3つの点のマーク）</strong> をタップします。</p>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h4>「ホーム画面に追加」を選択</h4>
-              <p>開いたメニューの中から、<strong style="color:var(--primary);">[ ホーム画面に追加 ]</strong> をタップします。</p>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h4>「追加」をタップ</h4>
-              <p>確認画面が出たら、そのまま <strong style="color:#2563eb;">[ 追加 ]</strong> をタップすれば完了です！</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="tip-box animate-up delay-4" style="background:rgba(22, 163, 74, 0.08); border:2px dashed rgba(22, 163, 74, 0.3);">
-          <span class="tip-icon" style="color:#16a34a;">✅</span>
-          <span class="tip-text" style="color:#15803d;">Androidの場合は、追加するだけでカレンダーなどもそのまま綺麗に動きますので特別な設定は不要です。</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== SLIDE 10: まとめ ===== -->
-    <div class="slide" data-slide="9">
       <div class="slide-inner">
         <div class="final-hero animate-up">
           <div class="final-checkmark">✅</div>
@@ -1857,10 +1768,10 @@
         <div class="info-card animate-up delay-2">
           <div class="info-card-title">
             <div class="info-icon" style="background:var(--primary-50); color:var(--primary);">📅</div>
-            スケジュール確認
+            予定確認
           </div>
           <div class="info-card-body">
-            <strong>ホーム画面</strong>または<strong>「予定」タブ</strong>で試合の予定をチェック。<br>
+            <strong>ホーム画面</strong>または<strong>「予定」タブ</strong>で公式戦・練習試合・練習・休日などをチェック。<br>
             カレンダー表示・リスト表示の切替も可能です。
           </div>
         </div>
@@ -1871,7 +1782,7 @@
             出欠の回答
           </div>
           <div class="info-card-body">
-            試合カードをタップ → <strong>お名前</strong>を入力 → <strong>○×△</strong>を選択 → <strong>送信</strong>！<br>
+            予定カードをタップ → <strong>お名前</strong>を入力 → <strong>午前・午後の○×△</strong>を選択 → <strong>送信</strong>！<br>
             同じ名前で再送信すれば回答の修正もOK。
           </div>
         </div>
@@ -1887,14 +1798,7 @@
           </div>
         </div>
 
-        <div class="animate-up delay-5" style="margin-top: 16px; background: rgba(6, 199, 85, 0.08); border: 2px dashed rgba(6, 199, 85, 0.3); border-radius: 14px; padding: 14px; display: flex; align-items: center; gap: 12px;">
-          <div style="background: #06c755; color: white; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(6,199,85,0.2);">💬</div>
-          <div style="font-size: 13px; font-weight: 900; color: #047857; line-height: 1.5;">
-            スケジュールを更新した際は、<br>グループLINEにて連絡いたします。
-          </div>
-        </div>
-
-        <div class="tip-box animate-up delay-6">
+        <div class="tip-box animate-up delay-5">
           <span class="tip-icon">❓</span>
           <span class="tip-text">わからないことがあれば、チーム代表者（監督・コーチ）にお気軽にご相談ください。</span>
         </div>
@@ -1911,7 +1815,7 @@
   </div>
 
   <script>
-    const TOTAL_SLIDES = 10;
+    const TOTAL_SLIDES = 8;
     let current = 0;
     let isAnimating = false;
 
